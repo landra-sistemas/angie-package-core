@@ -1,0 +1,172 @@
+{
+    "id": "170c02f8-0ce7-488a-a3e7-807196d5ee07",
+    "name": "hl7_visual",
+    "data": {
+        "id": "170c02f8-0ce7-488a-a3e7-807196d5ee07",
+        "name": "hl7_visual",
+        "description": "HL7 visual",
+        "created_on": "2021-11-22T10:14:03.257Z",
+        "channels": [
+            {
+                "name": "Channel",
+                "id": "fa46d407-40c4-4d69-bc12-2fe5fb861a80",
+                "created_on": "2021-11-22T10:15:36.245Z",
+                "version": 100,
+                "nodes": [
+                    {
+                        "id": "43fddbee-f513-430a-aa11-345938282e75",
+                        "type_id": "331a8e65-ed4e-4911-89b3-20f256870301",
+                        "custom_name": "HTTP Input",
+                        "links": [
+                            {
+                                "node_id": "eeb67b76-4949-4c5e-bb2a-f7fa60180704",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 123,
+                            "y": 105
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "protocol": "jetty:http",
+                            "hostname": "0.0.0.0",
+                            "path": "/hl7",
+                            "port": 8778,
+                            "out_format": "raw"
+                        }
+                    },
+                    {
+                        "id": "eeb67b76-4949-4c5e-bb2a-f7fa60180704",
+                        "type_id": "e0a4f9f7-0d4b-4fd4-a500-dc944b17f241",
+                        "custom_name": "Log",
+                        "links": [],
+                        "position": {
+                            "x": 620,
+                            "y": 110
+                        },
+                        "data": {
+                            "name": "debug"
+                        }
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-10T15:31:58.033Z",
+                "message_count": 0,
+                "trace": true,
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "last_deployed_route": null
+            },
+            {
+                "name": "Test",
+                "id": "f2c8e90a-5464-4aa0-83b3-33951678aeaa",
+                "created_on": "2021-11-29T16:49:28.171Z",
+                "version": 78,
+                "nodes": [
+                    {
+                        "id": "546f4d2b-c93d-4c08-aedb-eab88ef7f15d",
+                        "type_id": "331a8e65-ed4e-4911-89b3-20f256870301",
+                        "custom_name": "HTTP Input",
+                        "links": [
+                            {
+                                "node_id": "8d3c57d5-304e-48a6-8d73-a2622eb2923b",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 133,
+                            "y": 170
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "protocol": "jetty:http",
+                            "hostname": "0.0.0.0",
+                            "path": "",
+                            "port": 7875,
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "8d3c57d5-304e-48a6-8d73-a2622eb2923b",
+                        "type_id": "a50e7aff-e302-4fd9-bfe4-31e64bc8fe02",
+                        "custom_name": "JSON Mapper",
+                        "links": [
+                            {
+                                "node_id": "412288c7-6a39-49af-ad64-61f1371be330",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 446,
+                            "y": 248
+                        },
+                        "data": {
+                            "label": "JSON Mapper",
+                            "channel_id": "f2c8e90a-5464-4aa0-83b3-33951678aeaa",
+                            "channel_status": "UNDEPLOYED",
+                            "code": {
+                                "code": "${body['id']}",
+                                "value": "${body['id2']}"
+                            }
+                        }
+                    },
+                    {
+                        "id": "bb3a39f9-9038-4c49-b0ae-570c070d7be0",
+                        "type_id": "61a6b078-f7a2-4f0d-978b-c9c36e136d58",
+                        "custom_name": "Inyectar Mensaje",
+                        "links": [
+                            {
+                                "node_id": "8d3c57d5-304e-48a6-8d73-a2622eb2923b",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 203,
+                            "y": 358
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "channel_id": "f2c8e90a-5464-4aa0-83b3-33951678aeaa",
+                            "channel_status": "Started",
+                            "buttonLabel": "Enviar",
+                            "code": "{\r\n\t\"id\": \"Holi\",\r\n\t\"id2\": \"Que Tal\"\r\n}",
+                            "url": "sendMessageToRoute",
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "412288c7-6a39-49af-ad64-61f1371be330",
+                        "type_id": "core.utils.log",
+                        "position": {
+                            "x": 766,
+                            "y": 332
+                        },
+                        "data": {
+                            "label": "Log",
+                            "name": "debug"
+                        },
+                        "links": []
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2021-12-20T08:09:53.944Z",
+                "message_count": 0,
+                "trace": false,
+                "messages_total": 83,
+                "messages_error": 10,
+                "messages_sent": 73,
+                "last_deployed_route": null
+            }
+        ],
+        "enabled": true,
+        "last_updated": "2022-01-24T15:30:27.708Z",
+        "package_code": "angie.core",
+        "package_version": "1.0.0"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
+}

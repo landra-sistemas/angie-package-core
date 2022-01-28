@@ -1,0 +1,970 @@
+{
+    "id": "eb4850e6-f0ae-4302-9c5b-5cc9ec99dee4",
+    "name": "Tests Iago",
+    "data": {
+        "id": "eb4850e6-f0ae-4302-9c5b-5cc9ec99dee4",
+        "name": "Tests Iago",
+        "description": "Integración de prueba para revisar el funcionamiento de la pantalla.\n\nAquí podrían poner una lista de versiones:\n\n- 30/12/2021-iago.s: Nuevos canales!",
+        "created_on": "2021-11-25T10:19:40.003Z",
+        "channels": [
+            {
+                "name": "unlikely_parrot",
+                "id": "1fe99fbf-14dd-45e3-a154-867ce80aa6b6",
+                "created_on": "2021-12-22T09:39:45.570Z",
+                "version": 29,
+                "nodes": [
+                    {
+                        "id": "2bc3e8e2-c4f3-4dca-bf9a-63bc49dee835",
+                        "type_id": "connections.http.input",
+                        "position": {
+                            "x": 110,
+                            "y": 135
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "query_params": [
+                                {
+                                    "code": "param1",
+                                    "value": "A"
+                                }
+                            ],
+                            "channel_id": "97d4503e-f608-45f4-9c88-d4f5f1f06793",
+                            "channel_status": "UNDEPLOYED",
+                            "out_format": "json",
+                            "protocol": "jetty:http",
+                            "hostname": "localhost",
+                            "path": "/angie/test",
+                            "port": 8888
+                        },
+                        "links": [
+                            {
+                                "node_id": "806ac04f-1e43-4ccc-98ae-61ee71f6993b",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "806ac04f-1e43-4ccc-98ae-61ee71f6993b",
+                        "type_id": "core.flow.loop",
+                        "position": {
+                            "x": 436,
+                            "y": 135
+                        },
+                        "data": {
+                            "label": "Loop",
+                            "channel_id": "97d4503e-f608-45f4-9c88-d4f5f1f06793",
+                            "channel_status": "UNDEPLOYED",
+                            "count": 5,
+                            "handles": [
+                                {
+                                    "id": "out0",
+                                    "to": "",
+                                    "title": "Iteraciones",
+                                    "color": "blue"
+                                },
+                                {
+                                    "id": "out1",
+                                    "to": "",
+                                    "title": "Fin búcle",
+                                    "color": "red"
+                                }
+                            ]
+                        },
+                        "links": [
+                            {
+                                "node_id": "a3148ea2-0f8d-4928-ba16-5cf6886a6a88",
+                                "handle": "out0"
+                            },
+                            {
+                                "node_id": "f97499fc-fd63-4b6f-a819-9730f6dbd6e0",
+                                "handle": "out1"
+                            },
+                            {
+                                "node_id": "09de703b-a24f-45f4-a6af-943e8f26c190",
+                                "handle": "out0"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "a3148ea2-0f8d-4928-ba16-5cf6886a6a88",
+                        "type_id": "core.utils.log",
+                        "position": {
+                            "x": 958,
+                            "y": 161
+                        },
+                        "data": {
+                            "label": "Log",
+                            "channel_id": "97d4503e-f608-45f4-9c88-d4f5f1f06793",
+                            "channel_status": "UNDEPLOYED",
+                            "name": "debug"
+                        },
+                        "links": []
+                    },
+                    {
+                        "id": "f97499fc-fd63-4b6f-a819-9730f6dbd6e0",
+                        "type_id": "connections.http.output",
+                        "position": {
+                            "x": 720.48,
+                            "y": 300.97400000000005
+                        },
+                        "data": {
+                            "label": "HTTP Output",
+                            "channel_id": "97d4503e-f608-45f4-9c88-d4f5f1f06793",
+                            "channel_status": "UNDEPLOYED",
+                            "query_params": [
+                                {
+                                    "code": "param2",
+                                    "value": "B"
+                                }
+                            ],
+                            "protocol": "http",
+                            "hostname": "2dc860a4-35db-433d-96c7-815c8ea7fa34.mock.pstmn.io",
+                            "path": "/user",
+                            "port": 443
+                        },
+                        "links": []
+                    },
+                    {
+                        "id": "09de703b-a24f-45f4-a6af-943e8f26c190",
+                        "type_id": "core.flow.switch",
+                        "position": {
+                            "x": 652,
+                            "y": 65
+                        },
+                        "data": {
+                            "handles": [
+                                {
+                                    "id": "out0",
+                                    "condition": "false",
+                                    "to": ""
+                                },
+                                {
+                                    "id": "out1",
+                                    "condition": "true"
+                                }
+                            ],
+                            "label": "Switch",
+                            "channel_id": "1fe99fbf-14dd-45e3-a154-867ce80aa6b6",
+                            "channel_status": "UNDEPLOYED",
+                            "language": "simple"
+                        },
+                        "links": [
+                            {
+                                "node_id": "c5694a25-8526-4931-b982-463371c24103",
+                                "handle": "out0"
+                            },
+                            {
+                                "node_id": "a3148ea2-0f8d-4928-ba16-5cf6886a6a88",
+                                "handle": "out1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c5694a25-8526-4931-b982-463371c24103",
+                        "type_id": "core.utils.debug",
+                        "position": {
+                            "x": 914,
+                            "y": 32
+                        },
+                        "data": {
+                            "label": "Debug",
+                            "channel_id": "1fe99fbf-14dd-45e3-a154-867ce80aa6b6",
+                            "channel_status": "UNDEPLOYED"
+                        },
+                        "links": []
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-11T14:38:37.630Z",
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "last_deployed_route": null,
+                "deployment_options": {
+                    "trace_file": true,
+                    "trace_headers": true,
+                    "assigned_agent": [
+                        "e9cbba1d-88b1-461f-94a9-7f4e426ead3d"
+                    ],
+                    "restart_policy": "unless_stopped",
+                    "trace_properties": true,
+                    "agent_assign_mode": "fixed",
+                    "trace_incoming_message": true,
+                    "trace_outgoing_message": true
+                },
+                "agent": null
+            },
+            {
+                "name": "valid_unicorn",
+                "id": "9ebe6344-fe79-4508-8376-3be18fba9f63",
+                "created_on": "2021-12-29T11:19:27.094Z",
+                "version": 233,
+                "nodes": [
+                    {
+                        "id": "bd213531-9b94-4fd6-8ca1-98e41455d7ce",
+                        "type_id": "331a8e65-ed4e-4911-89b3-20f256870301",
+                        "custom_name": "HTTP Input",
+                        "links": [
+                            {
+                                "node_id": "d5637d00-1c5f-4b0f-b481-a0b14863b592",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 198,
+                            "y": 285
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "protocol": "jetty:http",
+                            "hostname": "0.0.0.0",
+                            "path": "",
+                            "port": 7875,
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "870c5c87-8125-4d71-8c25-403dda526184",
+                        "type_id": "61a6b078-f7a2-4f0d-978b-c9c36e136d58",
+                        "custom_name": "Inyectar Mensaje",
+                        "links": [
+                            {
+                                "node_id": "d5637d00-1c5f-4b0f-b481-a0b14863b592",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 189,
+                            "y": 181
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "channel_id": "9ebe6344-fe79-4508-8376-3be18fba9f63",
+                            "channel_status": "Started",
+                            "buttonLabel": "Enviar",
+                            "code": "{\r\n\t\"id\": \"Holi\",\r\n\t\"id2\": \"Que Tal\"\r\n}",
+                            "url": "sendMessageToRoute",
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "7c520e85-c4ab-4841-ae54-7920460f2bdd",
+                        "type_id": "core.utils.json_mapper",
+                        "position": {
+                            "x": 727,
+                            "y": 179
+                        },
+                        "data": {
+                            "label": "JSON Mapper",
+                            "code": {
+                                "code": "${body['id']}",
+                                "value": "${body['id2']}",
+                                "test": "test"
+                            }
+                        },
+                        "links": [
+                            {
+                                "node_id": "3f0ecd4f-eb84-42bb-9b54-e9e636e40525",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1a464e63-afbc-48ba-9cb9-21305007de5e",
+                        "type_id": "header_mapper",
+                        "position": {
+                            "x": 525,
+                            "y": 178
+                        },
+                        "data": {
+                            "label": "Header Maper",
+                            "code": [
+                                {
+                                    "format": "simple",
+                                    "code": "messageId",
+                                    "value": "${body['id']}"
+                                }
+                            ]
+                        },
+                        "links": [
+                            {
+                                "node_id": "7c520e85-c4ab-4841-ae54-7920460f2bdd",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "0d19e681-5b92-4731-86d9-229ef8ae3fc3",
+                        "type_id": "end",
+                        "position": {
+                            "x": 595,
+                            "y": 286
+                        },
+                        "data": {
+                            "label": "Fin Flujo",
+                            "code": "{\n    \"success\": true\n}\n"
+                        },
+                        "links": [],
+                        "style": {},
+                        "type": "output",
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "__rf": {
+                            "position": {
+                                "x": 1170,
+                                "y": 229
+                            },
+                            "width": 150,
+                            "height": 41,
+                            "handleBounds": {
+                                "source": null,
+                                "target": [
+                                    {
+                                        "id": null,
+                                        "position": "left",
+                                        "x": -7,
+                                        "y": 12.921875,
+                                        "width": 8,
+                                        "height": 15
+                                    }
+                                ]
+                            },
+                            "isDragging": false
+                        }
+                    },
+                    {
+                        "id": "3f0ecd4f-eb84-42bb-9b54-e9e636e40525",
+                        "type_id": "http_output",
+                        "position": {
+                            "x": 958,
+                            "y": 178
+                        },
+                        "data": {
+                            "label": "HTTP Output",
+                            "query_params": {
+                                "bridgeEndpoint": true,
+                                "clearExpiredCookies": true,
+                                "copyHeaders": true,
+                                "ignoreResponseBody": false
+                            },
+                            "protocol": "http",
+                            "hostname": "127.0.0.1",
+                            "port": 8787
+                        },
+                        "links": [
+                            {
+                                "node_id": "760a0e70-a0fa-466a-9be7-183558ddb8d0",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "d5637d00-1c5f-4b0f-b481-a0b14863b592",
+                        "type_id": "wireTap",
+                        "position": {
+                            "x": 402.93005025035995,
+                            "y": 283.61182847504836
+                        },
+                        "data": {
+                            "label": "Wire Tap",
+                            "handles": [
+                                {
+                                    "id": "out0",
+                                    "to": "",
+                                    "title": "Clonar Mensaje",
+                                    "position": "top",
+                                    "color": "blue"
+                                },
+                                {
+                                    "id": "out1",
+                                    "to": "",
+                                    "title": "Continuar Flujo"
+                                }
+                            ]
+                        },
+                        "links": [
+                            {
+                                "node_id": "1a464e63-afbc-48ba-9cb9-21305007de5e",
+                                "handle": "out0"
+                            },
+                            {
+                                "node_id": "0d19e681-5b92-4731-86d9-229ef8ae3fc3",
+                                "handle": "out1"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "760a0e70-a0fa-466a-9be7-183558ddb8d0",
+                        "type_id": "end",
+                        "position": {
+                            "x": 1178,
+                            "y": 176
+                        },
+                        "data": {
+                            "label": "Fin Flujo",
+                            "code": ""
+                        },
+                        "links": [],
+                        "style": {},
+                        "type": "output",
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "__rf": {
+                            "position": {
+                                "x": 1170,
+                                "y": 229
+                            },
+                            "width": 150,
+                            "height": 41,
+                            "handleBounds": {
+                                "source": null,
+                                "target": [
+                                    {
+                                        "id": null,
+                                        "position": "left",
+                                        "x": -7,
+                                        "y": 12.921875,
+                                        "width": 8,
+                                        "height": 15
+                                    }
+                                ]
+                            },
+                            "isDragging": false
+                        }
+                    }
+                ],
+                "enabled": true,
+                "status": "Started",
+                "last_updated": "2022-01-24T14:27:46.716Z",
+                "messages_total": 160,
+                "messages_error": 13,
+                "messages_sent": 147,
+                "last_deployed_route": "<routes xmlns=\"http://camel.apache.org/schema/spring\"><route  id=\"bd213531-9b94-4fd6-8ca1-98e41455d7ce\">\n    <from uri=\"jetty:http://0.0.0.0:7875\"/>\n    \n        <unmarshal><json/></unmarshal>    <to uri=\"direct:d5637d00-1c5f-4b0f-b481-a0b14863b592\" />\n</route><route  id=\"870c5c87-8125-4d71-8c25-403dda526184\">\n    <from uri=\"direct:870c5c87-8125-4d71-8c25-403dda526184\"/>\n    <setBody>\n        <simple>\n            <![CDATA[{\\r\\n\t\"id\": \"Holi\",\\r\\n\t\"id2\": \"Que Tal\"\\r\\n}]]>\n        </simple>\n    </setBody>\n          <unmarshal><json/></unmarshal>    <to uri=\"direct:d5637d00-1c5f-4b0f-b481-a0b14863b592\" />\n</route><route  id=\"7c520e85-c4ab-4841-ae54-7920460f2bdd\">\n    <from uri=\"direct:7c520e85-c4ab-4841-ae54-7920460f2bdd\"/>\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{\"code\":\"${body['id']}\",\"value\":\"${body['id2']}\",\"test\":\"test\"}]]>\n        </simple>\n    </setBody>\n    <to uri=\"direct:3f0ecd4f-eb84-42bb-9b54-e9e636e40525\" />\n</route><route  id=\"1a464e63-afbc-48ba-9cb9-21305007de5e\">\n    <from uri=\"direct:1a464e63-afbc-48ba-9cb9-21305007de5e\"/>\n    <setHeader name=\"messageId\"><simple>${body['id']}</simple></setHeader>\n    <to uri=\"direct:7c520e85-c4ab-4841-ae54-7920460f2bdd\" />\n</route><route  id=\"0d19e681-5b92-4731-86d9-229ef8ae3fc3\">\n    <from uri=\"direct:0d19e681-5b92-4731-86d9-229ef8ae3fc3\"/>\n    \n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{\n    \"success\": true\n}\n]]>\n        </simple>\n    </setBody>\n    \n    <to uri=\"mock:end0d19e681-5b92-4731-86d9-229ef8ae3fc3\"/>\n</route><route  id=\"3f0ecd4f-eb84-42bb-9b54-e9e636e40525\">\n    <from uri=\"direct:3f0ecd4f-eb84-42bb-9b54-e9e636e40525\"/>\n    <to uri=\"http://127.0.0.1:8787?bridgeEndpoint%3Dtrue%26clearExpiredCookies%3Dtrue%26copyHeaders%3Dtrue%26ignoreResponseBody%3Dfalse\"/>\n    \n    <to uri=\"direct:760a0e70-a0fa-466a-9be7-183558ddb8d0\" />\n</route><route  id=\"d5637d00-1c5f-4b0f-b481-a0b14863b592\">\r\n    <from uri=\"direct:d5637d00-1c5f-4b0f-b481-a0b14863b592\"/>\r\n        <wireTap uri=\"direct:1a464e63-afbc-48ba-9cb9-21305007de5e\"/>\r\n    <to uri=\"direct:0d19e681-5b92-4731-86d9-229ef8ae3fc3\" />\r\n    \r\n    <to uri=\"mock:ending\"/>\r\n</route><route  id=\"760a0e70-a0fa-466a-9be7-183558ddb8d0\">\n    <from uri=\"direct:760a0e70-a0fa-466a-9be7-183558ddb8d0\"/>\n    \n    \n    <to uri=\"mock:end760a0e70-a0fa-466a-9be7-183558ddb8d0\"/>\n</route></routes>",
+                "deployment_options": {
+                    "trace_file": true,
+                    "trace_headers": true,
+                    "restart_policy": "unless_stopped",
+                    "traced_headers": [
+                        "messageId"
+                    ],
+                    "trace_properties": true,
+                    "agent_assign_mode": "auto",
+                    "trace_incoming_message": true,
+                    "trace_outgoing_message": true
+                },
+                "agent": {
+                    "id": "e9cbba1d-88b1-461f-94a9-7f4e426ead3d",
+                    "joined_date": "2022-01-11T15:39:00.951Z",
+                    "approved": true,
+                    "approved_date": "2022-01-11T15:39:07.511Z",
+                    "name": "JUM1",
+                    "status": "online",
+                    "meta": {
+                        "ip": "127.0.0.1",
+                        "platform": "Windows 10",
+                        "rest_api_port": "6100"
+                    },
+                    "last_socket_id": "1Tg-kj_FxNqvPQIhAAAD",
+                    "current_channels": {
+                        "list": [
+                            {
+                                "id": "9ebe6344-fe79-4508-8376-3be18fba9f63",
+                                "name": "valid_unicorn",
+                                "status": {
+                                    "status": "Started",
+                                    "uptime": "2h31m41s",
+                                    "messages_sent": 0,
+                                    "messages_error": 0,
+                                    "messages_total": 0
+                                }
+                            },
+                            {
+                                "id": "e67555fa-4046-48a9-8bf6-15efc2a37fd5",
+                                "name": "common_fowl",
+                                "status": {
+                                    "status": "Started",
+                                    "uptime": "2h31m21s",
+                                    "messages_sent": 0,
+                                    "messages_error": 0,
+                                    "messages_total": 0
+                                }
+                            }
+                        ]
+                    },
+                    "last_online_date": "2022-01-26T12:56:08.742Z",
+                    "options": null
+                }
+            },
+            {
+                "name": "smoggy_marlin",
+                "id": "e46b2624-4bce-49f3-8d83-83febc4b9ea4",
+                "created_on": "2021-12-29T11:48:35.245Z",
+                "version": 5,
+                "nodes": [
+                    {
+                        "id": "1a194ee5-cad8-4451-859f-beb74ae98726",
+                        "type_id": "331a8e65-ed4e-4911-89b3-20f256870301",
+                        "custom_name": "HTTP Input",
+                        "links": [
+                            {
+                                "node_id": "645e9d20-f93a-4f5f-89f3-4f42415c30c7",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 183,
+                            "y": 220
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "protocol": "jetty:http",
+                            "hostname": "0.0.0.0",
+                            "path": "",
+                            "port": 7877,
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "645e9d20-f93a-4f5f-89f3-4f42415c30c7",
+                        "type_id": "a50e7aff-e302-4fd9-bfe4-31e64bc8fe02",
+                        "custom_name": "JSON Mapper",
+                        "links": [
+                            {
+                                "node_id": "521d3e0d-2a69-4adf-a857-138fb30863d7",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 496,
+                            "y": 298
+                        },
+                        "data": {
+                            "label": "JSON Mapper",
+                            "channel_id": "f2c8e90a-5464-4aa0-83b3-33951678aeaa",
+                            "channel_status": "UNDEPLOYED",
+                            "code": {
+                                "code": "${body['id']}",
+                                "value": "${body['id2']}"
+                            }
+                        }
+                    },
+                    {
+                        "id": "2e0a1349-95b7-4b67-84cc-b520f883dd7e",
+                        "type_id": "61a6b078-f7a2-4f0d-978b-c9c36e136d58",
+                        "custom_name": "Inyectar Mensaje",
+                        "links": [
+                            {
+                                "node_id": "645e9d20-f93a-4f5f-89f3-4f42415c30c7",
+                                "handle": null
+                            }
+                        ],
+                        "position": {
+                            "x": 253,
+                            "y": 408
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "channel_id": "f2c8e90a-5464-4aa0-83b3-33951678aeaa",
+                            "channel_status": "Started",
+                            "buttonLabel": "Enviar",
+                            "code": "{\r\n\t\"id\": \"Holi\",\r\n\t\"id2\": \"Que Tal\"\r\n}",
+                            "url": "sendMessageToRoute",
+                            "out_format": "json"
+                        }
+                    },
+                    {
+                        "id": "521d3e0d-2a69-4adf-a857-138fb30863d7",
+                        "type_id": "core.utils.log",
+                        "position": {
+                            "x": 816,
+                            "y": 382
+                        },
+                        "data": {
+                            "label": "Log",
+                            "name": "debug"
+                        },
+                        "links": []
+                    },
+                    {
+                        "id": "f55ab21c-59bc-4bc0-98aa-cc0c8da2562a",
+                        "type_id": "core.utils.template",
+                        "position": {
+                            "x": 553,
+                            "y": 558
+                        },
+                        "data": {
+                            "label": "Template",
+                            "channel_id": "9ebe6344-fe79-4508-8376-3be18fba9f63",
+                            "channel_status": "UNDEPLOYED",
+                            "code": "{\n    \"code\": \"${body['id']}\",\n    \"value\": \"${body['id2']}\"\n}"
+                        },
+                        "links": []
+                    }
+                ],
+                "enabled": false,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-24T14:09:28.491Z",
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "last_deployed_route": "<routes xmlns=\"http://camel.apache.org/schema/spring\"><route  id=\"1a194ee5-cad8-4451-859f-beb74ae98726\">\n    <from uri=\"jetty:http://0.0.0.0:7877\"/>\n    \n    <unmarshal>\n        <json/>\n    </unmarshal>\n    <multicast>\n        <to uri=\"direct:645e9d20-f93a-4f5f-89f3-4f42415c30c7\"/>\n    </multicast>\n</route><route  id=\"645e9d20-f93a-4f5f-89f3-4f42415c30c7\">\n    <from uri=\"direct:645e9d20-f93a-4f5f-89f3-4f42415c30c7\"/>\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[[object Object]]]>\n        </simple>\n    </setBody>\n    <multicast>\n        <to uri=\"direct:521d3e0d-2a69-4adf-a857-138fb30863d7\"/>\n    </multicast>\n</route><route  id=\"2e0a1349-95b7-4b67-84cc-b520f883dd7e\">\n    <from uri=\"direct:2e0a1349-95b7-4b67-84cc-b520f883dd7e\"/>\n    <setBody>\n        <simple>\n<![CDATA[{\r\n\t\"id\": \"Holi\",\r\n\t\"id2\": \"Que Tal\"\r\n}]]>\n        </simple>\n    </setBody>\n    <unmarshal>\n        <json/>\n    </unmarshal>\n    <multicast>\n        <to uri=\"direct:645e9d20-f93a-4f5f-89f3-4f42415c30c7\"/>\n    </multicast>\n</route><route  id=\"521d3e0d-2a69-4adf-a857-138fb30863d7\"> <from uri=\"direct:521d3e0d-2a69-4adf-a857-138fb30863d7\"/> <to uri=\"log:debug\"/> </route></routes>",
+                "agent": null
+            },
+            {
+                "name": "provincial_dragon",
+                "id": "4c6783cc-8245-4da6-ba4e-44857f464593",
+                "created_on": "2022-01-11T14:56:03.556Z",
+                "version": 21,
+                "nodes": [
+                    {
+                        "id": "94747fad-d14a-47bf-a526-2e18acef6162",
+                        "type_id": "core.utils.inject_node",
+                        "position": {
+                            "x": 153,
+                            "y": 137
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "out_format": "raw",
+                            "buttonLabel": "Enviar",
+                            "code": "Test",
+                            "url": "sendMessageToRoute"
+                        },
+                        "links": [
+                            {
+                                "node_id": "97d4504d-33d7-4887-99e3-1560c1454d23",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "bd84a754-2547-4edf-acf4-3d4add77371e",
+                        "type_id": "core.utils.log",
+                        "position": {
+                            "x": 588,
+                            "y": 158
+                        },
+                        "data": {
+                            "label": "Log",
+                            "name": "debug"
+                        },
+                        "links": []
+                    },
+                    {
+                        "id": "97d4504d-33d7-4887-99e3-1560c1454d23",
+                        "type_id": "delay",
+                        "position": {
+                            "x": 372,
+                            "y": 157
+                        },
+                        "data": {
+                            "label": "Delay",
+                            "delay": 10000
+                        },
+                        "links": [
+                            {
+                                "node_id": "bd84a754-2547-4edf-acf4-3d4add77371e",
+                                "handle": null
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "last_updated": "2022-01-11T15:10:35.098Z",
+                "last_deployed_route": "<routes xmlns=\"http://camel.apache.org/schema/spring\"><route  id=\"94747fad-d14a-47bf-a526-2e18acef6162\">\n    <from uri=\"direct:94747fad-d14a-47bf-a526-2e18acef6162\"/>\n    <setBody>\n        <simple>\n<![CDATA[Test]]>\n        </simple>\n    </setBody>\n    <multicast>\n        <to uri=\"direct:97d4504d-33d7-4887-99e3-1560c1454d23\"/>\n    </multicast>\n</route><route  id=\"bd84a754-2547-4edf-acf4-3d4add77371e\"> <from uri=\"direct:bd84a754-2547-4edf-acf4-3d4add77371e\"/> <to uri=\"log:debug\"/> </route><route  id=\"97d4504d-33d7-4887-99e3-1560c1454d23\"><from uri=\"direct:97d4504d-33d7-4887-99e3-1560c1454d23\"/><delay><constant>10000</constant></delay><to uri=\"mock:result\"/><multicast> <to uri=\"direct:bd84a754-2547-4edf-acf4-3d4add77371e\"/> </multicast> </route></routes>",
+                "agent": null
+            },
+            {
+                "name": "obliged_vole",
+                "id": "aefdf098-80d3-476b-92b7-8cf637055c03",
+                "created_on": "2022-01-18T08:30:28.709Z",
+                "version": 14,
+                "nodes": [
+                    {
+                        "id": "eab47328-7f16-4d99-b019-14bf4f3102ed",
+                        "type_id": "http_input",
+                        "position": {
+                            "x": 88,
+                            "y": 222
+                        },
+                        "data": {
+                            "label": "HTTP Input",
+                            "out_format": "raw",
+                            "protocol": "jetty:http",
+                            "hostname": "0.0.0.0",
+                            "path": "",
+                            "port": 8888
+                        },
+                        "links": [
+                            {
+                                "node_id": "b8bb767a-cb1a-450b-8813-4b2cc927b6e4",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "b8bb767a-cb1a-450b-8813-4b2cc927b6e4",
+                        "type_id": "json_mapper",
+                        "position": {
+                            "x": 339,
+                            "y": 200
+                        },
+                        "data": {
+                            "label": "Establecer Headers",
+                            "code": {
+                                "idPaciente": "${body['code']}"
+                            }
+                        },
+                        "links": [
+                            {
+                                "node_id": "e8e23512-38fc-4452-b4f3-d6e8c4acb6a6",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e8e23512-38fc-4452-b4f3-d6e8c4acb6a6",
+                        "type_id": "groovy_simple",
+                        "position": {
+                            "x": 567,
+                            "y": 189
+                        },
+                        "data": {
+                            "label": "QuerySQL",
+                            "language": "groovy",
+                            "code": "// Extraer idPaciente header -> SQL\n\n//Ejecutar SQL\n\n//Establecer Body con el resultset"
+                        },
+                        "links": [
+                            {
+                                "node_id": "a2407f40-5d5e-4749-a3d4-147e5afa8153",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "a2407f40-5d5e-4749-a3d4-147e5afa8153",
+                        "type_id": "log",
+                        "position": {
+                            "x": 891.4515960270513,
+                            "y": 250.86568535430078
+                        },
+                        "data": {
+                            "label": "Log",
+                            "name": "debug"
+                        },
+                        "links": []
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-18T08:32:31.791Z",
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "agent": null
+            },
+            {
+                "name": "striking_herring",
+                "id": "4deb89b2-3e3b-4336-b0df-6e2365d3228f",
+                "created_on": "2022-01-26T15:23:29.137Z",
+                "version": 20,
+                "nodes": [
+                    {
+                        "id": "840fac20-5d43-413e-9b0e-fada27244774",
+                        "type_id": "http_output",
+                        "position": {
+                            "x": 741,
+                            "y": 180
+                        },
+                        "data": {
+                            "query_params": {
+                                "bridgeEndpoint": false,
+                                "clearExpiredCookies": true,
+                                "copyHeaders": true,
+                                "ignoreResponseBody": false,
+                                "method": "GET"
+                            },
+                            "label": "HTTP Output",
+                            "protocol": "http",
+                            "hostname": "127.0.0.1",
+                            "port": 8787
+                        },
+                        "links": [
+                            {
+                                "node_id": "ab70eec0-2086-4462-907d-1333cddf2cd9",
+                                "handle": null
+                            }
+                        ],
+                        "style": {},
+                        "type": "default",
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "__rf": {
+                            "position": {
+                                "x": 739,
+                                "y": 180
+                            },
+                            "width": 150,
+                            "height": 41,
+                            "handleBounds": {
+                                "source": [
+                                    {
+                                        "id": null,
+                                        "position": "right",
+                                        "x": 150,
+                                        "y": 12.921875,
+                                        "width": 8,
+                                        "height": 15
+                                    }
+                                ],
+                                "target": [
+                                    {
+                                        "id": null,
+                                        "position": "left",
+                                        "x": -8,
+                                        "y": 12.921875,
+                                        "width": 8,
+                                        "height": 15
+                                    }
+                                ]
+                            },
+                            "isDragging": false
+                        }
+                    },
+                    {
+                        "id": "ab70eec0-2086-4462-907d-1333cddf2cd9",
+                        "type_id": "end",
+                        "position": {
+                            "x": 1013,
+                            "y": 180
+                        },
+                        "data": {
+                            "label": "Fin Flujo",
+                            "code": ""
+                        },
+                        "links": [],
+                        "style": {},
+                        "type": "output",
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "__rf": {
+                            "position": {
+                                "x": 959,
+                                "y": 178
+                            },
+                            "width": 150,
+                            "height": 41,
+                            "handleBounds": {
+                                "source": null,
+                                "target": [
+                                    {
+                                        "id": null,
+                                        "position": "left",
+                                        "x": -8,
+                                        "y": 12.921875,
+                                        "width": 8,
+                                        "height": 15
+                                    }
+                                ]
+                            },
+                            "isDragging": false
+                        }
+                    },
+                    {
+                        "id": "1e340219-23e1-41dc-946f-c9eca09e21e5",
+                        "type_id": "",
+                        "position": {
+                            "x": 981,
+                            "y": 193
+                        },
+                        "data": "",
+                        "links": []
+                    },
+                    {
+                        "id": "2b1580b3-aab7-46fd-9f81-96078aadd63d",
+                        "type_id": "inject",
+                        "position": {
+                            "x": 478,
+                            "y": 162
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "out_format": "raw",
+                            "buttonLabel": "Enviar",
+                            "code": "",
+                            "url": "sendMessageToRoute"
+                        },
+                        "links": [
+                            {
+                                "node_id": "840fac20-5d43-413e-9b0e-fada27244774",
+                                "handle": null
+                            }
+                        ]
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-26T15:27:54.817Z",
+                "messages_total": 3,
+                "messages_error": 2,
+                "messages_sent": 1,
+                "last_deployed_route": "<routes xmlns=\"http://camel.apache.org/schema/spring\"><route  id=\"840fac20-5d43-413e-9b0e-fada27244774\">\n    <from uri=\"direct:840fac20-5d43-413e-9b0e-fada27244774\"/>\n    <to uri=\"http://127.0.0.1:8787?bridgeEndpoint%3Dfalse%26clearExpiredCookies%3Dtrue%26copyHeaders%3Dtrue%26ignoreResponseBody%3Dfalse%26method%3DGET\"/>\n    \n    <to uri=\"direct:ab70eec0-2086-4462-907d-1333cddf2cd9\" />\n</route><route  id=\"ab70eec0-2086-4462-907d-1333cddf2cd9\">\n    <from uri=\"direct:ab70eec0-2086-4462-907d-1333cddf2cd9\"/>\n    \n    \n    <to uri=\"mock:endab70eec0-2086-4462-907d-1333cddf2cd9\"/>\n</route><route  id=\"2b1580b3-aab7-46fd-9f81-96078aadd63d\">\n    <from uri=\"direct:2b1580b3-aab7-46fd-9f81-96078aadd63d\"/>\n    <setBody>\n        <simple>\n            <![CDATA[]]>\n        </simple>\n    </setBody>\n              <to uri=\"direct:840fac20-5d43-413e-9b0e-fada27244774\" />\n</route></routes>",
+                "deployment_options": {
+                    "trace_file": true,
+                    "restart_policy": "none",
+                    "agent_assign_mode": "auto"
+                },
+                "agent": null
+            }
+        ],
+        "enabled": true,
+        "last_updated": "2022-01-26T15:28:01.805Z",
+        "package_code": "angie.core",
+        "package_version": "1.0.0",
+        "deployment_config": {
+            "id": "eb4850e6-f0ae-4302-9c5b-5cc9ec99dee4",
+            "last_deployment_date": "2022-01-26T15:28:01.810Z",
+            "deployment_config": null,
+            "organization_id": "da5c4c54-343c-4b19-a1d8-d6fbabe30016",
+            "enabled": true,
+            "channel_config": {
+                "1fe99fbf-14dd-45e3-a154-867ce80aa6b6": {
+                    "trace_file": true,
+                    "trace_headers": true,
+                    "assigned_agent": [
+                        "e9cbba1d-88b1-461f-94a9-7f4e426ead3d"
+                    ],
+                    "restart_policy": "unless_stopped",
+                    "trace_properties": true,
+                    "agent_assign_mode": "fixed",
+                    "trace_incoming_message": true,
+                    "trace_outgoing_message": true
+                },
+                "4deb89b2-3e3b-4336-b0df-6e2365d3228f": {
+                    "trace_file": true,
+                    "restart_policy": "none",
+                    "agent_assign_mode": "auto"
+                },
+                "9ebe6344-fe79-4508-8376-3be18fba9f63": {
+                    "trace_file": true,
+                    "trace_headers": true,
+                    "restart_policy": "unless_stopped",
+                    "traced_headers": [
+                        "messageId"
+                    ],
+                    "trace_properties": true,
+                    "agent_assign_mode": "auto",
+                    "trace_incoming_message": true,
+                    "trace_outgoing_message": true
+                }
+            }
+        }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
+}

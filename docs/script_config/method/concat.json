@@ -1,0 +1,36 @@
+{
+    "id": 1045,
+    "document_type": "method",
+    "code": "concat",
+    "data": {
+        "id": 1045,
+        "code": "concat",
+        "name": "Concatenar",
+        "type": {
+            "type": "$self"
+        },
+        "isActive": true,
+        "language": "groovy",
+        "parentType": {
+            "type": "string"
+        },
+        "sourceCode": "return self + params.value;",
+        "description": "",
+        "package_code": "angie.core",
+        "paramMembers": [
+            {
+                "code": "value",
+                "name": "Valor",
+                "type": {
+                    "type": "$self"
+                },
+                "required": false
+            }
+        ],
+        "complexityLevel": 1,
+        "package_version": "1.0.0",
+        "sourceCodeForBinaryOperator": ""
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
+}
