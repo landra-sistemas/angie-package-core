@@ -1,0 +1,160 @@
+{
+    "id": "661b6e91-2d27-4838-9b62-7e64536e6d50",
+    "name": "Prueba Enrich",
+    "data": {
+        "id": "661b6e91-2d27-4838-9b62-7e64536e6d50",
+        "name": "Prueba Enrich",
+        "description": "",
+        "created_on": "2022-01-20T08:47:22.737Z",
+        "channels": [
+            {
+                "name": "Enrich",
+                "id": "df7e1736-0231-47d7-b8f6-b7f689bc96e0",
+                "created_on": "2022-01-20T08:50:28.430Z",
+                "version": 90,
+                "nodes": [
+                    {
+                        "id": "26582fae-8f7f-4f1f-8735-13ba0b1c0697",
+                        "type_id": "inject",
+                        "position": {
+                            "x": 134,
+                            "y": 163
+                        },
+                        "data": {
+                            "label": "Inyectar Mensaje",
+                            "out_format": "json",
+                            "buttonLabel": "Enviar",
+                            "code": "{\n    \"a\": 1\n}",
+                            "url": "sendMessageToRoute"
+                        },
+                        "links": [
+                            {
+                                "node_id": "decc2127-2798-4acc-9027-8741723229b7",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "72eabb5e-12c0-4db8-bc27-9df7012a7223",
+                        "type_id": "log",
+                        "position": {
+                            "x": 963,
+                            "y": 188
+                        },
+                        "data": {
+                            "label": "Log",
+                            "name": "debug"
+                        },
+                        "links": []
+                    },
+                    {
+                        "id": "decc2127-2798-4acc-9027-8741723229b7",
+                        "type_id": "json_mapper",
+                        "position": {
+                            "x": 389,
+                            "y": 180
+                        },
+                        "data": {
+                            "label": "JSON Mapper",
+                            "code": {
+                                "mapA": "${body['a']}"
+                            }
+                        },
+                        "links": [
+                            {
+                                "node_id": "00c6fadd-e065-4ad6-bd5f-9595dbbc955d",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "00c6fadd-e065-4ad6-bd5f-9595dbbc955d",
+                        "type_id": "enrich",
+                        "position": {
+                            "x": 626,
+                            "y": 169
+                        },
+                        "data": {
+                            "label": "Enrich",
+                            "handles": [
+                                {
+                                    "id": "out0",
+                                    "to": "",
+                                    "title": "Enriquecimiento",
+                                    "color": "blue"
+                                },
+                                {
+                                    "id": "out1",
+                                    "to": "",
+                                    "title": "Salida",
+                                    "color": "red"
+                                }
+                            ],
+                            "output_scope": "BODY",
+                            "output_field": "SQL_DATA_TEST",
+                            "format": "json"
+                        },
+                        "links": [
+                            {
+                                "node_id": "72eabb5e-12c0-4db8-bc27-9df7012a7223",
+                                "handle": "out1"
+                            },
+                            {
+                                "node_id": "807eed37-81d8-46c5-90f6-50104da8bef7",
+                                "handle": "out0"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "807eed37-81d8-46c5-90f6-50104da8bef7",
+                        "type_id": "sql",
+                        "position": {
+                            "x": 833,
+                            "y": 95
+                        },
+                        "data": {
+                            "label": "SQL",
+                            "query": "SELECT * FROM external_integration",
+                            "user": "root",
+                            "password": "B1c0mL4ndr4",
+                            "url": "jdbc:mysql://localhost:3306/dbs?serverTimezone=Europe/Paris",
+                            "type": 1,
+                            "driver": "com.mysql.cj.jdbc.Driver"
+                        },
+                        "links": [
+                            {
+                                "node_id": "8c9f6431-b746-47e7-a39b-737b20eed0de",
+                                "handle": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "8c9f6431-b746-47e7-a39b-737b20eed0de",
+                        "type_id": "end",
+                        "position": {
+                            "x": 1052,
+                            "y": 95
+                        },
+                        "data": {
+                            "label": "Fin Flujo",
+                            "code": ""
+                        },
+                        "links": []
+                    }
+                ],
+                "enabled": true,
+                "status": "UNDEPLOYED",
+                "last_updated": "2022-01-20T14:29:16.124Z",
+                "messages_total": 0,
+                "messages_error": 0,
+                "messages_sent": 0,
+                "last_deployed_route": "<routes xmlns=\"http://camel.apache.org/schema/spring\"><route  id=\"26582fae-8f7f-4f1f-8735-13ba0b1c0697\">\n    <from uri=\"direct:26582fae-8f7f-4f1f-8735-13ba0b1c0697\"/>\n    <setBody>\n        <simple>\n            <![CDATA[{\\r\\n    \"a\": 1\\r\\n}]]>\n        </simple>\n    </setBody>\n          <unmarshal><json/></unmarshal>    <multicast>\n        <to uri=\"direct:decc2127-2798-4acc-9027-8741723229b7\"/>\n    </multicast>\n</route><route  id=\"72eabb5e-12c0-4db8-bc27-9df7012a7223\"> <from uri=\"direct:72eabb5e-12c0-4db8-bc27-9df7012a7223\"/> <to uri=\"log:debug\"/> </route><route  id=\"decc2127-2798-4acc-9027-8741723229b7\">\n    <from uri=\"direct:decc2127-2798-4acc-9027-8741723229b7\"/>\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{\"mapA\":\"${body['a']}\"}]]>\n        </simple>\n    </setBody>\n    <multicast>\n        <to uri=\"direct:00c6fadd-e065-4ad6-bd5f-9595dbbc955d\"/>\n    </multicast>\n</route><route  id=\"00c6fadd-e065-4ad6-bd5f-9595dbbc955d\">\r\n    <from uri=\"direct:00c6fadd-e065-4ad6-bd5f-9595dbbc955d\"/>\r\n    <setProperty name=\"OUTPUT_SCOPE\">\r\n        <constant>BODY</constant>\r\n    </setProperty>\r\n    <setProperty name=\"OUTPUT_FIELD\">\r\n        <constant>SQL_DATA_TEST</constant>\r\n    </setProperty>\r\n    <enrich \r\n            strategyRef=\"enrichStrategyJSON\"> \r\n        <simple>direct:807eed37-81d8-46c5-90f6-50104da8bef7</simple>\r\n    </enrich>\r\n    <multicast>\r\n        <to uri=\"direct:72eabb5e-12c0-4db8-bc27-9df7012a7223\"/>\r\n    </multicast>\r\n</route><route  id=\"807eed37-81d8-46c5-90f6-50104da8bef7\">\n    <from uri=\"direct:807eed37-81d8-46c5-90f6-50104da8bef7\"/>\n    <setBody>\n        <groovy>\n<![CDATA[\nimport java.sql.*; \nimport groovy.sql.Sql;\nimport java.sql.Driver;\nimport groovy.json.JsonSlurper;\nimport groovy.json.JsonOutput;\n\ndef driver = Class.forName(\"com.mysql.cj.jdbc.Driver\").newInstance() as Driver\n\njava.util.Properties info = new java.util.Properties();\ninfo.put(\"user\", \"root\");\ninfo.put(\"password\", \"B1c0mL4ndr4\");\n\ndef connection = driver.connect(\"jdbc:mysql://localhost:3306/dbs?serverTimezone=Europe/Paris\", info);\n\ndef sql = Sql.newInstance(connection)\n\ndef result;\n\njsonBody = JsonOutput.toJson(request.getBody())\ndef parserJson = new JsonSlurper()\ndef body = parserJson.parseText(jsonBody)\n\ndef queryParams = [:]\ndef counterParams = 0;\nfor (paramvalue in []) {\n    def item = [:]\n    if (paramvalue.scope == \"BODY\") {\n        queryParams[paramvalue.code] = body[paramvalue.value];\n    } else {\n        queryParams[paramvalue.code] = paramvalue.value;\n    }\n}\n\nif (1 == 1) {\n    result = [:];\n    def counter = 0;\n    sql.eachRow(\"SELECT * FROM external_integration\", queryParams){ row ->\n        def item = [:]\n        (1..row.getMetaData().columnCount).each {\n            item[\"${row.getMetaData().getColumnName( it )}\"] = row[ it - 1 ];\n        }\n        result[counter++] = item;\n    }\n} else { \n    sql.connection.autoCommit = false\n    try {\n        if (1 == 2) {\n            result = sql.executeInsert(\"SELECT * FROM external_integration\", queryParams);\n        }\n        if (1 == 3) {\n            result = sql.executeUpdate(\"SELECT * FROM external_integration\", queryParams);\n        }\n        if (1 == 4) {\n            result = sql.execute(\"SELECT * FROM external_integration\", queryParams);\n        }\n        sql.commit()\n    } catch(Exception ex) {\n        sql.rollback()\n    }\n}\n\nsql.close()\n\nreturn new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(result);\n]]>\n        </groovy>\n    </setBody>\n    <multicast>\n        <to uri=\"direct:8c9f6431-b746-47e7-a39b-737b20eed0de\"/>\n    </multicast>\n</route><route  id=\"8c9f6431-b746-47e7-a39b-737b20eed0de\">\n    <from uri=\"direct:8c9f6431-b746-47e7-a39b-737b20eed0de\"/>\n    \n    \n    <to uri=\"mock:end8c9f6431-b746-47e7-a39b-737b20eed0de\"/>\n</route></routes>"
+            }
+        ],
+        "package_code": "angie.core",
+        "package_version": "1.0.0",
+        "last_updated": "2022-01-25T09:32:38.281Z"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
+}
