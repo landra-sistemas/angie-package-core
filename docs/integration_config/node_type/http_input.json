@@ -1,5 +1,7 @@
 {
-    "id": "305c2b55-4cd8-414a-b0d9-0825ca18facf",
+    "id": "4bdbaee0-a5ce-4bcc-a67b-5256469f44b6",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "http_input",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"HTTP Listener\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"hostname\",\n        \"port\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"out_format\": {\n            \"title\": \"Formato Recibido\",\n            \"type\": \"string\",\n            \"enum\": [\n                \"json\",\n                \"hl7\",\n                \"raw\"\n            ],\n            \"enumNames\": [\n                \"JSON\",\n                \"HL7\",\n                \"RAW\"\n            ]\n        },\n        \"hostname\": {\n            \"title\": \"Host\",\n            \"type\": \"string\"\n        },\n        \"path\": {\n            \"title\": \"Ruta\",\n            \"type\": \"string\"\n        },\n        \"port\": {\n            \"title\": \"Puerto\",\n            \"type\": \"number\"\n        },\n        \n        \"query_params\": {\n            \"title\": \"Opciones\",\n            \"type\": \"object\",\n            \"properties\": {\n                \"async\": {\n                    \"type\": \"boolean\",\n                    \"default\": false,\n                    \"title\": \"Asíncrono\"\n                },\n                \"enableCORS\": {\n                    \"type\": \"boolean\",\n                    \"default\": false,\n                    \"title\": \"Habilitar CORS\"\n                }\n            }\n        },\n        \"extra_query_params\": {\n            \"title\": \"Parámetros Extra\",\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"required\": [\n                    \"code\",\n                    \"value\"\n                ],\n                \"properties\": {\n                    \"code\": {\n                        \"title\": \"Clave\",\n                        \"type\": \"string\"\n                    },\n                    \"value\": {\n                        \"title\": \"Valor\",\n                        \"type\": \"string\"\n                    }\n                }\n            }\n        }\n    }\n}",
         "react_component_type": "input"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }

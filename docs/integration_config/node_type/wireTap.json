@@ -1,5 +1,7 @@
 {
-    "id": "bead3800-4136-413e-acf3-1c5961d48f22",
+    "id": "c188668b-e545-4e57-add1-86529311772a",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "wireTap",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"title\": \"Wire Tap\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "MultiTargetNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }
