@@ -1,7 +1,5 @@
 {
-    "id": 196,
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": 68,
     "document_type": "object",
     "code": "camel_request",
     "data": {
@@ -11,5 +9,7 @@
         "customGroup": "",
         "package_code": "angie.core",
         "package_version": "1.0.0"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

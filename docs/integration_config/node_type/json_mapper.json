@@ -1,7 +1,5 @@
 {
-    "id": "8ce3426f-dc27-4b4c-b499-b7909309f3a8",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "4ea27628-4bd2-4b54-af75-95a8cbcd3241",
     "document_type": "node_type",
     "code": "json_mapper",
     "data": {
@@ -19,5 +17,7 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"Create simple JSON objects from input message.\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"code\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"type\": \"object\",\n            \"additionalProperties\": {\n                \"type\": \"string\"\n            }\n        }\n    }\n}",
         "react_component_type": "default"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

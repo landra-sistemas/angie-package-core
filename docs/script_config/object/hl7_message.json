@@ -1,7 +1,5 @@
 {
-    "id": 199,
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": 71,
     "document_type": "object",
     "code": "hl7_message",
     "data": {
@@ -9,5 +7,7 @@
         "name": "HL7 Message",
         "package_code": "angie.core",
         "package_version": "1.0.0"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

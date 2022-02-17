@@ -1,7 +1,5 @@
 {
-    "id": "9e6d7e4a-4dd4-432f-b741-aacbd720e148",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "e8afb120-987f-47b1-8ad6-7b5585bc2d97",
     "document_type": "node_type",
     "code": "debug",
     "data": {
@@ -18,5 +16,7 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"name\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "default"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

@@ -1,7 +1,5 @@
 {
-    "id": "1d2f798b-f9af-48c0-ab5a-6db73b0e5cd3",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "256f7ca3-58ea-4f4c-a8cb-43ba243494dc",
     "document_type": "node_type",
     "code": "entity_extractor",
     "data": {
@@ -20,5 +18,7 @@
         "component_bg_color": "#ffffff",
         "react_component_type": "output",
         "component_border_color": "#313030"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

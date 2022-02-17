@@ -1,7 +1,5 @@
 {
-    "id": 193,
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": 65,
     "document_type": "context",
     "code": "camel_context_groovy",
     "data": {
@@ -16,5 +14,7 @@
         "startCode": "def context = [exchange: exchange, request: request, response: response, properties: properties, variables: [:]];",
         "package_code": "angie.core",
         "package_version": "1.0.0"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }
