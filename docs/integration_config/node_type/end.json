@@ -1,5 +1,7 @@
 {
-    "id": "92163c14-e35f-4307-818b-886aaf08175b",
+    "id": "d4345568-56c0-42ff-8965-2e050e532a5c",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "end",
     "data": {
@@ -21,7 +23,5 @@
         "json_data_schema": "{\n    \"title\": \"End\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"title\": \"Respuesta\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
         "react_component_type": "output"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }

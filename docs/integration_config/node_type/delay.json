@@ -1,5 +1,7 @@
 {
-    "id": "36cae24d-b9b5-4a32-8ae2-07cda64dbeb9",
+    "id": "ac3c444e-e5ac-421d-bf19-041a4c9aa9e0",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "delay",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"delay\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"delay\": {\n            \"type\": \"number\"\n        }\n    }\n}",
         "react_component_type": "default"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }

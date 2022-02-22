@@ -1,5 +1,7 @@
 {
-    "id": "8a2c1d25-4695-4d7e-a228-2f381e97147a",
+    "id": "afd2bd32-381c-44de-8794-a881533eacf4",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "rabbitmq_input",
     "data": {
@@ -19,7 +21,5 @@
         "prefetch_options": true,
         "camel_component_id": "core.rabbitmq.input",
         "react_component_type": "input"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }
