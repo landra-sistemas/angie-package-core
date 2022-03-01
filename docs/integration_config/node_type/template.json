@@ -1,11 +1,9 @@
 {
-    "id": "e0853464-d362-446a-98d5-e348562ec0d3",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "023638af-93aa-4ca2-951f-a97ee9995fc6",
     "document_type": "node_type",
     "code": "template",
     "data": {
-        "id": "e0853464-d362-446a-98d5-e348562ec0d3",
+        "id": "023638af-93aa-4ca2-951f-a97ee9995fc6",
         "code": "template",
         "name": "Template",
         "group": "Utilidades",
@@ -17,6 +15,8 @@
         "json_ui_schema": "{\r\n    \"code_json\": {\r\n        \"condition\": \"format=json\",\r\n        \"ui:columnSize\": \"12\",\r\n        \"ui:widget\": \"AceEditorWidget\",\r\n        \"ui:mode\": \"json\",\r\n        \"ui:beautify\": true,\r\n        \"ui:height\": 400\r\n    },\r\n    \"code_xml\": {\r\n        \"condition\": \"format=xml\",\r\n        \"ui:columnSize\": \"12\",\r\n        \"ui:widget\": \"AceEditorWidget\",\r\n        \"ui:mode\": \"xml\",\r\n        \"ui:disableValidation\": true,\r\n        \"ui:beautify\": false,\r\n        \"ui:height\": 400\r\n    }\r\n    \r\n}\r\n",
         "package_version": "1.0.0",
         "json_data_schema": "{\r\n    \"description\": \"Create simple JSON or XML objects from input message.\",\r\n    \"type\": \"object\",\r\n    \"required\": [\r\n        \"label\",\r\n        \"format\"\r\n    ],\r\n    \"properties\": {\r\n        \"label\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"format\": {\r\n            \"title\": \"Formato\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"xml\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"XML\"\r\n            ]\r\n        },\r\n        \"out_format\": {\r\n            \"title\": \"Formato Salida\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"hl7\",\r\n                \"raw\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"HL7\",\r\n                \"RAW\"\r\n            ]\r\n        },\r\n        \"in_format\": {\r\n            \"title\": \"Formato Entrada\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"hl7\",\r\n                \"raw\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"HL7\",\r\n                \"RAW\"\r\n            ]\r\n        },\r\n        \"code_json\": {\r\n            \"title\": \"JSON\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"code_xml\": {\r\n            \"title\": \"XML\",\r\n            \"type\": \"string\"\r\n        }\r\n    }\r\n}",
-        "react_component_type": "default"
-    }
+        "react_component_type": "AngieDefaultNode"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

@@ -1,11 +1,9 @@
 {
-    "id": "0791fbdd-f14b-422b-9aaf-5db4ba0c0b89",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "c5214090-2bf2-492b-897b-b9edd3c9be98",
     "document_type": "node_type",
     "code": "json_to_xml",
     "data": {
-        "id": "95c060d8-2438-4681-8860-c25e1488f91d",
+        "id": "c5214090-2bf2-492b-897b-b9edd3c9be98",
         "code": "json_to_xml",
         "name": "JSON to XML",
         "group": "Utilidades",
@@ -17,6 +15,8 @@
         "json_ui_schema": "{\n    \"applyUnmarshal\": {\n        \"ui:widget\": \"checkbox\"\n    }\n}",
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"JSON to XML\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"applyUnmarshal\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        },\n        \"applyUnmarshal\": {\n            \"title\": \"Aplicar Unmarshal en salida\",\n            \"type\": \"boolean\"\n        }\n    }\n}",
-        "react_component_type": "default"
-    }
+        "react_component_type": "AngieDefaultNode"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

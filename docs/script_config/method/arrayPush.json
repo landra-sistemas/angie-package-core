@@ -1,7 +1,5 @@
 {
-    "id": 43,
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": 139,
     "document_type": "method",
     "code": "arrayPush",
     "data": {
@@ -37,5 +35,7 @@
         "complexityLevel": 1,
         "package_version": "1.0.0",
         "sourceCodeForBinaryOperator": ""
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }

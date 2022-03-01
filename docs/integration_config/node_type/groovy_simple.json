@@ -1,11 +1,9 @@
 {
-    "id": "c88b268c-c213-49cf-94d1-6003bca2daf4",
-    "package_code": "angie.core",
-    "package_version": "1.0.0",
+    "id": "8090c4f0-e17e-44b9-a1dc-d2edc1a96ea1",
     "document_type": "node_type",
     "code": "groovy_simple",
     "data": {
-        "id": "50b890b5-a309-4b7c-9fa0-5c8b23b25c6f",
+        "id": "8090c4f0-e17e-44b9-a1dc-d2edc1a96ea1",
         "code": "groovy_simple",
         "name": "Groovy Code",
         "group": "Utilidades",
@@ -22,6 +20,8 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"Replaces body by custom groovy code\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"code\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
-        "react_component_type": "default"
-    }
+        "react_component_type": "AngieDefaultNode"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.0.0"
 }
