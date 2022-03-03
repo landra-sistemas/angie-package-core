@@ -1,5 +1,5 @@
 {
-    "id": "0b9e1c79-7552-4437-a7a7-17dbbc8337ce",
+    "id": "fabab9f7-38b0-48cd-8d03-e14e54fb5adc",
     "document_type": "node_type",
     "code": "tcp_output",
     "data": {
@@ -18,5 +18,5 @@
         "react_component_type": "AngieDefaultNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

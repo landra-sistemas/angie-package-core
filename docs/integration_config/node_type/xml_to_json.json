@@ -1,5 +1,5 @@
 {
-    "id": "28bda47c-8f16-4a20-b952-30074fc3751e",
+    "id": "70f0d177-8f23-41ac-9d5a-f37645a97c87",
     "document_type": "node_type",
     "code": "xml_to_json",
     "data": {
@@ -17,5 +17,5 @@
         "react_component_type": "AngieDefaultNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

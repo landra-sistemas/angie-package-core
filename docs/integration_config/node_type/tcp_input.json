@@ -1,5 +1,5 @@
 {
-    "id": "63e41bc7-f3c6-466c-a5b6-02f2e438a8d0",
+    "id": "44d8018e-6203-4e08-af6c-d435152bdba0",
     "document_type": "node_type",
     "code": "tcp_input",
     "data": {
@@ -23,5 +23,5 @@
         "react_component_type": "AngieInputNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

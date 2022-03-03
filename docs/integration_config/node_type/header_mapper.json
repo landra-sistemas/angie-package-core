@@ -1,5 +1,5 @@
 {
-    "id": "c735a817-d3ed-4966-a39b-2d3d6d3299df",
+    "id": "1b997e3d-75ec-446a-9c50-0465ccbbdabb",
     "document_type": "node_type",
     "code": "header_mapper",
     "data": {
@@ -18,5 +18,5 @@
         "react_component_type": "AngieDefaultNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

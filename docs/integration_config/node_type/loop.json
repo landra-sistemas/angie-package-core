@@ -1,5 +1,5 @@
 {
-    "id": "5248bb9c-5160-44da-8fd9-2b15014d3d0e",
+    "id": "7eddb0f0-a311-4666-9e82-a367a2f31616",
     "document_type": "node_type",
     "code": "loop",
     "data": {
@@ -17,5 +17,5 @@
         "react_component_type": "MultiTargetNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

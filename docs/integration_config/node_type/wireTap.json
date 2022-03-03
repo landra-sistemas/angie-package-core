@@ -1,5 +1,5 @@
 {
-    "id": "2d3e30c0-b3d4-48f1-9a79-fcb6f6a7a1f4",
+    "id": "56ccd51d-9d5b-44e4-a31c-7148e9147516",
     "document_type": "node_type",
     "code": "wireTap",
     "data": {
@@ -18,5 +18,5 @@
         "react_component_type": "MultiTargetNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

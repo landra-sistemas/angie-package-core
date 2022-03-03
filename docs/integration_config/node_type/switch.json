@@ -1,5 +1,5 @@
 {
-    "id": "01a45251-b843-4c8f-8158-56cdda4459ce",
+    "id": "58b56a2b-5103-40e5-8381-4a1257c1bd54",
     "document_type": "node_type",
     "code": "switch",
     "data": {
@@ -23,5 +23,5 @@
         "react_component_type": "MultiTargetNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

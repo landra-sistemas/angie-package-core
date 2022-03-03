@@ -1,5 +1,5 @@
 {
-    "id": 136,
+    "id": 202,
     "document_type": "object",
     "code": "key_value_pair",
     "data": {
@@ -29,5 +29,5 @@
         "package_version": "1.0.0"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

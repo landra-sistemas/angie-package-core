@@ -1,5 +1,5 @@
 {
-    "id": "d6765735-d304-4cb2-9783-52da58dcd3e4",
+    "id": "72f90d10-6b18-409e-a5b3-8c93eedd66a1",
     "document_type": "node_type",
     "code": "comment",
     "data": {
@@ -17,5 +17,5 @@
         "react_component_type": "CommentNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

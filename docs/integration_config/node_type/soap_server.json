@@ -1,5 +1,5 @@
 {
-    "id": "b69a5c59-5fe7-4877-a09a-e94243a88c87",
+    "id": "42124142-1fe2-4bb3-99e7-c3ab746c209b",
     "document_type": "node_type",
     "code": "soap_server",
     "data": {
@@ -18,5 +18,5 @@
         "react_component_type": "AngieInputNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

@@ -1,5 +1,5 @@
 {
-    "id": 138,
+    "id": 204,
     "document_type": "method",
     "code": "arrayIndex",
     "data": {
@@ -37,5 +37,5 @@
         "sourceCodeForBinaryOperator": ""
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

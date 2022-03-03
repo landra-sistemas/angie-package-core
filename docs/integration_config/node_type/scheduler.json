@@ -1,5 +1,5 @@
 {
-    "id": "2c56cbd7-33e1-40de-b222-c65634f7be38",
+    "id": "9b99d068-9f20-4f91-bac6-f72913c51442",
     "document_type": "node_type",
     "code": "scheduler",
     "data": {
@@ -18,5 +18,5 @@
         "react_component_type": "AngieInputNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

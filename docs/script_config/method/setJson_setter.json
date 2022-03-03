@@ -1,5 +1,5 @@
 {
-    "id": 155,
+    "id": 221,
     "document_type": "method",
     "code": "setJson_setter",
     "data": {
@@ -45,5 +45,5 @@
         "sourceCodeForBinaryOperator": ""
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

@@ -1,5 +1,5 @@
 {
-    "id": 129,
+    "id": 195,
     "document_type": "context",
     "code": "camel_context_groovy",
     "data": {
@@ -16,5 +16,5 @@
         "package_version": "1.0.0"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

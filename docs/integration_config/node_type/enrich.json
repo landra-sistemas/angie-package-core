@@ -1,5 +1,5 @@
 {
-    "id": "178845bc-4a01-4fe8-ab6d-32f020f3efa6",
+    "id": "d77a36a9-db56-46da-bcb4-b5c677a8ce86",
     "document_type": "node_type",
     "code": "enrich",
     "data": {
@@ -17,5 +17,5 @@
         "react_component_type": "MultiTargetNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

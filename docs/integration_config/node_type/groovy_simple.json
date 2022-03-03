@@ -1,5 +1,5 @@
 {
-    "id": "8090c4f0-e17e-44b9-a1dc-d2edc1a96ea1",
+    "id": "2fcddac4-81f6-441d-b739-5e00321b112f",
     "document_type": "node_type",
     "code": "groovy_simple",
     "data": {
@@ -23,5 +23,5 @@
         "react_component_type": "AngieDefaultNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

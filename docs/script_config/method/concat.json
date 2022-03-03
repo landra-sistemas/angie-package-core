@@ -1,5 +1,5 @@
 {
-    "id": 141,
+    "id": 207,
     "document_type": "method",
     "code": "concat",
     "data": {
@@ -32,5 +32,5 @@
         "sourceCodeForBinaryOperator": ""
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

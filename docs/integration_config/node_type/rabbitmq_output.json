@@ -1,5 +1,5 @@
 {
-    "id": "c4c41958-409d-4cb1-8a90-0a93396a7574",
+    "id": "e5c06203-68ce-4c71-b37c-3b2bca122aff",
     "document_type": "node_type",
     "code": "rabbitmq_output",
     "data": {
@@ -19,5 +19,5 @@
         "react_component_type": "AngieDefaultNode"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }

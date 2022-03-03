@@ -1,5 +1,5 @@
 {
-    "id": 135,
+    "id": 201,
     "document_type": "object",
     "code": "hl7_message",
     "data": {
@@ -9,5 +9,5 @@
         "package_version": "1.0.0"
     },
     "package_code": "angie.core",
-    "package_version": "1.0.0"
+    "package_version": "1.1.0"
 }
