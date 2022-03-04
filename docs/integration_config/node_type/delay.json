@@ -1,9 +1,9 @@
 {
-    "id": "0ad3222b-c940-4086-80c3-b67d21c3a2ca",
+    "id": "d0836fc0-2f25-4f18-b935-7ecc4a55850c",
     "document_type": "node_type",
     "code": "delay",
     "data": {
-        "id": "0ad3222b-c940-4086-80c3-b67d21c3a2ca",
+        "id": "d0836fc0-2f25-4f18-b935-7ecc4a55850c",
         "code": "delay",
         "name": "Delay",
         "group": "Tiempo",
@@ -11,7 +11,7 @@
         "handles": "in,out",
         "defaults": "{\n    \"delay\": 1000\n}",
         "package_code": "angie.core",
-        "xml_template": "<route  id=\"{{source}}\"><from uri=\"direct:{{source}}\"/><delay><constant>{{delay}}</constant></delay><to uri=\"mock:result\"/><multicast>{{#each target}} <to uri=\"direct:{{this}}\"/> {{/each}}</multicast> </route>",
+        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    <delay>\n        <constant>\n            {{delay}}\n        </constant>\n    </delay>\n    <to uri=\"stub:result?discardIfNoConsumers=true\"/>\n    <multicast>\n        {{#each target}}\n        <to uri=\"direct:{{this}}\"/>\n        {{/each}}\n    </multicast>\n</route>",
         "json_ui_schema": "{}",
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"delay\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"delay\": {\n            \"type\": \"number\"\n        }\n    }\n}",
