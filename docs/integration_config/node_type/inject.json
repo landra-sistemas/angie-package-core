@@ -1,5 +1,7 @@
 {
-    "id": "7851e7bc-76d9-4e21-bcb8-33b3134343a2",
+    "id": "d75a21d8-f987-4c32-876e-deda8605b447",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "inject",
     "data": {
@@ -22,7 +24,5 @@
         "json_data_schema": "{\n    \"title\": \"Inyectar Mensaje\",\n    \"description\": \"Permite la inyección de un mensaje personalizado en un nodo\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"buttonLabel\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"out_format\": {\n            \"title\": \"Formato\",\n            \"type\": \"string\",\n            \"enum\": [\n                \"json\",\n                \"hl7\",\n                \"raw\"\n            ],\n            \"enumNames\": [\n                \"JSON\",\n                \"HL7\",\n                \"RAW\"\n            ]\n        },\n        \"code\": {\n            \"title\": \"Mensaje\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
         "react_component_type": "ButtonNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

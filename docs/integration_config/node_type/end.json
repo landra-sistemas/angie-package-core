@@ -1,9 +1,11 @@
 {
-    "id": "0bb1ff97-336f-409c-a072-ec9bc4bad374",
+    "id": "572661c9-077c-4cac-ad60-ad443f8da339",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "end",
     "data": {
-        "id": "4c11806c-fce6-4a9a-bd31-ca52016f96ae",
+        "id": "572661c9-077c-4cac-ad60-ad443f8da339",
         "code": "end",
         "name": "Fin Flujo",
         "group": "Flujo",
@@ -15,13 +17,11 @@
         "plugin_id": null,
         "description": "Output message",
         "package_code": "angie.core",
-        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    \n    {{#if (ne code \"\")}}\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{{safe code}}]]>\n        </simple>\n    </setBody>\n    {{/if}}\n    \n    <to uri=\"mock:end{{source}}\"/>\n</route>",
+        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{#if (ne code \"\")}}\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{{safe code}}]]>\n        </simple>\n    </setBody>\n    {{/if}}\n    <to uri=\"stub:end{{source}}?discardIfNoConsumers=true\"/>\n</route>",
         "json_ui_schema": "{\r\n    \"code\": {\r\n        \"ui:columnSize\": \"12\",\r\n        \"ui:widget\": \"AceEditorWidget\",\r\n        \"ui:mode\": \"json\",\r\n        \"ui:beautify\": false,\r\n        \"ui:height\": 260,\r\n        \"ui:help\": \"Dejar en blanco para responder con el mensaje del nodo anterior.\"\r\n    }\r\n    \r\n}",
-        "package_version": "1.0.0",
+        "package_version": "1.1.0",
         "json_data_schema": "{\n    \"title\": \"End\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"title\": \"Respuesta\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
         "react_component_type": "AngieOutputNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

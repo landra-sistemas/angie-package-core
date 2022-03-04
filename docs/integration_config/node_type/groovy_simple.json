@@ -1,5 +1,7 @@
 {
-    "id": "2fcddac4-81f6-441d-b739-5e00321b112f",
+    "id": "acbf70d0-570d-41d0-be40-ce69ef3ba0a0",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "groovy_simple",
     "data": {
@@ -21,7 +23,5 @@
         "json_data_schema": "{\n    \"description\": \"Replaces body by custom groovy code\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"code\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
         "react_component_type": "AngieDefaultNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

@@ -1,5 +1,7 @@
 {
-    "id": "18fd8230-30a5-4b82-9468-074b3949cbcb",
+    "id": "71676c4d-8d0f-4ad2-89a8-6d65181325c3",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "template",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\r\n    \"description\": \"Create simple JSON or XML objects from input message.\",\r\n    \"type\": \"object\",\r\n    \"required\": [\r\n        \"label\",\r\n        \"format\"\r\n    ],\r\n    \"properties\": {\r\n        \"label\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"format\": {\r\n            \"title\": \"Formato\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"xml\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"XML\"\r\n            ]\r\n        },\r\n        \"out_format\": {\r\n            \"title\": \"Formato Salida\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"hl7\",\r\n                \"raw\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"HL7\",\r\n                \"RAW\"\r\n            ]\r\n        },\r\n        \"in_format\": {\r\n            \"title\": \"Formato Entrada\",\r\n            \"type\": \"string\",\r\n            \"enum\": [\r\n                \"json\",\r\n                \"hl7\",\r\n                \"raw\"\r\n            ],\r\n            \"enumNames\": [\r\n                \"JSON\",\r\n                \"HL7\",\r\n                \"RAW\"\r\n            ]\r\n        },\r\n        \"code_json\": {\r\n            \"title\": \"JSON\",\r\n            \"type\": \"string\"\r\n        },\r\n        \"code_xml\": {\r\n            \"title\": \"XML\",\r\n            \"type\": \"string\"\r\n        }\r\n    }\r\n}",
         "react_component_type": "AngieDefaultNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }
