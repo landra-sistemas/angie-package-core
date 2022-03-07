@@ -1,7 +1,5 @@
 {
-    "id": "ea7872e4-6599-495d-9ef4-b19c7cae9d7a",
-    "package_code": "angie.core",
-    "package_version": "1.1.0",
+    "id": "9b99d068-9f20-4f91-bac6-f72913c51442",
     "document_type": "node_type",
     "code": "scheduler",
     "data": {
@@ -18,5 +16,7 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"Scheduler\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"delay\",\n        \"initialDelay\",\n        \"timeUnit\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        },\n        \"delay\": {\n            \"title\": \"Delay\",\n            \"type\": \"number\"\n        },\n        \"initialDelay\": {\n            \"title\": \"Initial Delay\",\n            \"type\": \"number\"\n        },\n        \"timeUnit\": {\n            \"title\": \"Time Unit\",\n            \"type\": \"string\",\n            \"enum\": [\n                \"NANOSECONDS\",\n                \"MICROSECONDS\",\n                \"MILLISECONDS\",\n                \"SECONDS\",\n                \"MINUTES\",\n                \"HOURS\",\n                \"DAYS\"\n            ],\n            \"enumNames\": [\n                \"NANOSECONDS\",\n                \"MICROSECONDS\",\n                \"MILLISECONDS\",\n                \"SECONDS\",\n                \"MINUTES\",\n                \"HOURS\",\n                \"DAYS\"\n            ]\n        }\n    }\n}",
         "react_component_type": "AngieInputNode"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.1.0"
 }

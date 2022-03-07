@@ -1,7 +1,5 @@
 {
-    "id": "c4fc6d53-1aaf-4132-8738-43369bd06492",
-    "package_code": "angie.core",
-    "package_version": "1.1.0",
+    "id": "3def46a0-21cb-4579-a0dd-f3788f223d58",
     "document_type": "node_type",
     "code": "groovy_visual",
     "data": {
@@ -18,5 +16,7 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"script\": {\n            \"type\": \"object\",\n            \"title\": \"Editor de código\"\n        },\n        \"code\": {\n            \"title\": \"Codigo generado\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "AngieDefaultNode"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.1.0"
 }

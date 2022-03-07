@@ -1,7 +1,5 @@
 {
-    "id": "00dcd04b-e721-484f-af1e-497bc9319635",
-    "package_code": "angie.core",
-    "package_version": "1.1.0",
+    "id": "70f0d177-8f23-41ac-9d5a-f37645a97c87",
     "document_type": "node_type",
     "code": "xml_to_json",
     "data": {
@@ -17,5 +15,7 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"XML to JSON\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"applyUnmarshal\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        },\n        \"applyUnmarshal\": {\n            \"title\": \"Aplicar Unmarshal en salida\",\n            \"type\": \"boolean\"\n        }\n    }\n}",
         "react_component_type": "AngieDefaultNode"
-    }
+    },
+    "package_code": "angie.core",
+    "package_version": "1.1.0"
 }
