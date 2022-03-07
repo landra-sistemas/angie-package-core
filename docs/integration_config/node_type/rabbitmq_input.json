@@ -22,6 +22,6 @@
         "prefetch_options": true,
         "camel_component_id": "core.rabbitmq.input",
         "react_component_type": "AngieInputNode",
-        "component_border_color": "#ff0072"
+        "component_border_color": "#0041d0"
     }
 }
