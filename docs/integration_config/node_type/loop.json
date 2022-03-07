@@ -1,5 +1,7 @@
 {
-    "id": "9acd4abb-b5f0-4a75-b21a-988114380f92",
+    "id": "2cf52380-5050-46b7-a527-8d33b9c0e8a6",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "loop",
     "data": {
@@ -15,7 +17,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"title\": \"Loop\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"count\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"count\": {\n            \"type\": \"number\"\n        }\n    }\n}",
         "react_component_type": "MultiTargetNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }

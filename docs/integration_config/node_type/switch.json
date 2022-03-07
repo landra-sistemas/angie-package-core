@@ -1,5 +1,7 @@
 {
-    "id": "b5bc8a29-59ef-47c3-8f62-41296fab899e",
+    "id": "1b771ce5-f07c-42c9-81df-1c2075a036f4",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "switch",
     "data": {
@@ -21,7 +23,5 @@
         "json_data_schema": "{\n    \"title\": \"Switch Node\",\n    \"description\": \"Create dynamic conditions\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"handles\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"language\": {\n            \"type\": \"string\"\n        },\n        \"handles\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"condition\": {\n                        \"type\": \"string\"\n                    }\n                }\n            }\n        }\n    }\n}",
         "form_type_plugin_id": null,
         "react_component_type": "MultiTargetNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }

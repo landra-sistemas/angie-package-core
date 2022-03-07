@@ -1,9 +1,11 @@
 {
-    "id": "d3a0e3c4-0305-4423-b80f-04df5f76bf29",
+    "id": "1bb5136a-a9a7-42d7-ab0e-0df599deba10",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "end",
     "data": {
-        "id": "d3a0e3c4-0305-4423-b80f-04df5f76bf29",
+        "id": "1bb5136a-a9a7-42d7-ab0e-0df599deba10",
         "code": "end",
         "name": "Fin Flujo",
         "group": "Flujo",
@@ -14,14 +16,14 @@
         "node_type": "node",
         "plugin_id": null,
         "description": "Output message",
+        "custom_color": true,
         "package_code": "angie.core",
         "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{#if (ne code \"\")}}\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{{safe code}}]]>\n        </simple>\n    </setBody>\n    {{/if}}\n    <to uri=\"stub:end{{source}}?discardIfNoConsumers=true\"/>\n</route>",
         "json_ui_schema": "{\r\n    \"code\": {\r\n        \"ui:columnSize\": \"12\",\r\n        \"ui:widget\": \"AceEditorWidget\",\r\n        \"ui:mode\": \"json\",\r\n        \"ui:beautify\": false,\r\n        \"ui:height\": 260,\r\n        \"ui:help\": \"Dejar en blanco para responder con el mensaje del nodo anterior.\"\r\n    }\r\n    \r\n}",
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"title\": \"End\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"title\": \"Respuesta\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "form_type_plugin_id": null,
-        "react_component_type": "AngieOutputNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+        "react_component_type": "AngieOutputNode",
+        "component_border_color": "#ff0072"
+    }
 }

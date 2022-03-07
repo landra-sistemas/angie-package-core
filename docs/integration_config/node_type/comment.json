@@ -1,5 +1,7 @@
 {
-    "id": "1b7c989f-73b4-431a-a27c-6d33e3392abb",
+    "id": "f577ffe9-0b4f-4e71-a4c2-e0561b5b0760",
+    "package_code": "angie.core",
+    "package_version": "1.0.0",
     "document_type": "node_type",
     "code": "comment",
     "data": {
@@ -15,7 +17,5 @@
         "package_version": "1.0.0",
         "json_data_schema": "{\n    \"description\": \"Comment\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "CommentNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.0.0"
+    }
 }
