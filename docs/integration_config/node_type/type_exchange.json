@@ -11,7 +11,7 @@
         "handles": "in,out",
         "defaults": "{\n    \"input_format\": \"json\",\n    \"output_format\": \"json\"\n}",
         "package_code": "angie.core",
-        "xml_template": "<route id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\" />\n    {{applyUnmarshal input_format}}\n    {{applyMarshal output_format}}\n    <multicast>\n        {{#each target}}\n        <to uri=\"direct:{{this}}\"/>\n        {{/each}}\n    </multicast>\n</route>",
+        "xml_template": "<route id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\" />\n    <setHeader name=\"InputFormat\">\n        <constant>\n            {{input_format}}\n        </constant>\n    </setHeader>\n    <setHeader name=\"OutputFormat\">\n        <constant>\n            {{output_format}}\n        </constant>\n    </setHeader>\n    {{applyUnmarshal input_format}}\n    {{#if (eq input_format \"base64\")}}\n        {{applyUnmarshal output_format}}\n    {{/if}}\n    {{applyMarshal output_format}}\n    <multicast>\n        {{#each target}}\n        <to uri=\"direct:{{this}}\"/>\n        {{/each}}\n    </multicast>\n</route>",
         "json_ui_schema": "{\n}",
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"description\": \"Type exchange\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        }\n    }\n}",

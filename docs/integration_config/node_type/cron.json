@@ -1,0 +1,20 @@
+{
+    "id": "f9e29222-5860-412d-b6b2-a16047fae514",
+    "document_type": "node_type",
+    "code": "cron",
+    "data": {
+        "id": "f9e29222-5860-412d-b6b2-a16047fae514",
+        "code": "cron",
+        "name": "Cron",
+        "group": "Tiempo",
+        "defaults": "{\n    \"schedule\": \"*/1 * * * * *\"\n}",
+        "package_code": "angie.core",
+        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"cron:tab?schedule={{schedule}}\"/>\n    {{generateDestination target}}\n</route>",
+        "json_ui_schema": "{\n}",
+        "package_version": "1.1.0",
+        "json_data_schema": "{\n    \"description\": \"Cron\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"schedule\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        },\n        \"schedule\": {\n            \"title\": \"Schedule\",\n            \"type\": \"string\"\n        }\n    }\n}",
+        "react_component_type": "AngieInputNode"
+    },
+    "package_code": "angie.core",
+    "package_version": "1.1.0"
+}
