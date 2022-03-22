@@ -9,7 +9,7 @@
         "group": "Flujo",
         "name_": "Log CLONED",
         "handles": "in",
-        "defaults": "{\n    \"code\": \"\",\n    \"input_format\": \"json\",\n    \"output_format\": \"json\"\n}",
+        "defaults": "{\n    \"code\": \"\",\n    \"input_format\": \"raw\",\n    \"output_format\": \"raw\"\n}",
         "form_type": "jsonschema",
         "node_type": "node",
         "plugin_id": null,
