@@ -11,7 +11,7 @@
         "defaults": "{\n    \"input_format\": \"json\",\n    \"output_format\": \"json\"\n}",
         "alt_codes": "core.utils.debug",
         "package_code": "angie.core",
-        "xml_template": "<route id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{applyUnmarshal input_format}}\n    <bean ref=\"debugBean\" method=\"debug\" />\n    {{applyMarshal output_format}} \n    {{generateDestination target}}\n</route>",
+        "xml_template": "<route id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{applyUnmarshal input_format input_format_options}}\n    <bean ref=\"debugBean\" method=\"debug\" />\n    {{applyMarshal output_format output_format_options}} \n    {{generateDestination target}}\n</route>",
         "json_ui_schema": "{}",
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"name\": {\n            \"type\": \"string\"\n        }\n    }\n}",

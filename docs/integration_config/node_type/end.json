@@ -15,7 +15,7 @@
         "plugin_id": null,
         "description": "Output message",
         "package_code": "angie.core",
-        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{applyUnmarshal input_format}}\n    {{#if (ne code \"\")}}\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{{safe code}}]]>\n        </simple>\n    </setBody>\n    {{/if}}\n    {{applyMarshal output_format}} \n    <to uri=\"stub:end{{source}}?discardIfNoConsumers=true\"/>\n</route>",
+        "xml_template": "<route  id=\"{{source}}\">\n    <from uri=\"direct:{{source}}\"/>\n    {{applyUnmarshal input_format input_format_options}}\n    {{#if (ne code \"\")}}\n    <setBody>\n        <simple trim=\"false\">\n<![CDATA[{{safe code}}]]>\n        </simple>\n    </setBody>\n    {{/if}}\n    {{applyMarshal output_format output_format_options}}\n    <to uri=\"stub:end{{source}}?discardIfNoConsumers=true\"/>\n</route>",
         "json_ui_schema": "{\r\n    \"code\": {\r\n        \"ui:columnSize\": \"12\",\r\n        \"ui:widget\": \"AceEditorWidget\",\r\n        \"ui:mode\": \"json\",\r\n        \"ui:beautify\": false,\r\n        \"ui:height\": 260,\r\n        \"ui:help\": \"Dejar en blanco para responder con el mensaje del nodo anterior.\"\r\n    }\r\n    \r\n}",
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"title\": \"End\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code\": {\n            \"title\": \"Respuesta\",\n            \"type\": \"string\"\n        }\n    }\n}",
