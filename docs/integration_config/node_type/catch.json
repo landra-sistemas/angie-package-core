@@ -1,5 +1,7 @@
 {
-    "id": "e5905ad7-e4cc-448c-873c-5d699b2cd23c",
+    "id": "bd5e806c-fe0d-41b4-8917-f904dd9385cc",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "catch",
     "data": {
@@ -13,7 +15,5 @@
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "AngieInputNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

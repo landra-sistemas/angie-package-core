@@ -1,5 +1,7 @@
 {
-    "id": "1c69a64c-f36e-4b92-9939-81fc06e92884",
+    "id": "ff50c55a-c758-43ff-947b-cc16a3970b81",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "type_exchange",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"description\": \"Type exchange\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "AngieDefaultNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

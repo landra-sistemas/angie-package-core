@@ -1,5 +1,7 @@
 {
-    "id": "85da2a32-7450-4a60-9b9f-367b55ab41a3",
+    "id": "786a9e2f-1b96-4bc8-8328-1e6da8e2a5a6",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "template",
     "data": {
@@ -16,7 +18,5 @@
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"description\": \"Create simple JSON or XML objects from input message.\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"format\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"type\": \"string\"\n        },\n        \"code_json\": {\n            \"title\": \"JSON\",\n            \"type\": \"string\"\n        },\n        \"code_xml\": {\n            \"title\": \"XML\",\n            \"type\": \"string\"\n        },\n        \"code_hl7\": {\n            \"title\": \"HL7\",\n            \"type\": \"string\"\n        },\n        \"code_csv\": {\n            \"title\": \"CSV\",\n            \"type\": \"string\"\n        },\n        \"code_raw\": {\n            \"title\": \"RAW\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "AngieDefaultNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }

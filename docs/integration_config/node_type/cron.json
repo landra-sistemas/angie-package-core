@@ -1,5 +1,7 @@
 {
-    "id": "e8dd22d5-6e36-4d25-bca4-3bfd6b2814be",
+    "id": "539b6cfa-0573-4a0c-aeaa-1c9351c027d5",
+    "package_code": "angie.core",
+    "package_version": "1.1.0",
     "document_type": "node_type",
     "code": "cron",
     "data": {
@@ -14,7 +16,5 @@
         "package_version": "1.1.0",
         "json_data_schema": "{\n    \"description\": \"Cron\",\n    \"type\": \"object\",\n    \"required\": [\n        \"label\",\n        \"schedule\"\n    ],\n    \"properties\": {\n        \"label\": {\n            \"title\": \"Name\",\n            \"type\": \"string\"\n        },\n        \"schedule\": {\n            \"title\": \"Schedule\",\n            \"type\": \"string\"\n        }\n    }\n}",
         "react_component_type": "AngieInputNode"
-    },
-    "package_code": "angie.core",
-    "package_version": "1.1.0"
+    }
 }
