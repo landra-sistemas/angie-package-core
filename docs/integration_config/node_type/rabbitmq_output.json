@@ -5,7 +5,7 @@
     "document_type": "node_type",
     "code": "rabbitmq_output",
     "data": {
-        "id": "e5c06203-68ce-4c71-b37c-3b2bca122aff",
+        "id": "08bd0eb2-df01-4251-8413-3c51531db234",
         "code": "rabbitmq_output",
         "name": "Producer RabbitMQ",
         "group": "Comunicaciones",

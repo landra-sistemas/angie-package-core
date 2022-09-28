@@ -5,6 +5,7 @@
     "document_type": "node_type",
     "code": "catch",
     "data": {
+        "id": "bd5e806c-fe0d-41b4-8917-f904dd9385cc",
         "code": "catch",
         "name": "Catch",
         "group": "Flujo",
